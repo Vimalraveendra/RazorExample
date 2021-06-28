@@ -55,13 +55,6 @@ using Microsoft.AspNetCore.Components.Web;
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/_Imports.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 8 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/_Imports.razor"
 using RazorExample;
 
@@ -75,8 +68,14 @@ using RazorExample.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/JavasComponent.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class JavasComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -84,28 +83,24 @@ using RazorExample.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/Index.razor"
+#line 7 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/JavasComponent.razor"
        
-    private int counter = 0;
-    private string txt = "Hello World!";
-    public string myName;
 
-    private void incrementCounter()
+    private ElementReference divElement;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        counter++;
-        txt = "Hello Dear!";
-    }
-    private void ChangeName(ChangeEventArgs e)
-    {
-        myName = e.Value as string;
-    }
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("setElementText", divElement, "Text after Rendered");
+        }
 
+    }
 
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime jsRuntime { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JSRuntime { get; set; }
     }
 }
 #pragma warning restore 1591
