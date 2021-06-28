@@ -75,8 +75,7 @@ using RazorExample.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class People : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -84,28 +83,33 @@ using RazorExample.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/Index.razor"
+#line 30 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/People.razor"
        
-    private int counter = 0;
-    private string txt = "Hello World!";
-    public string myName;
 
-    private void incrementCounter()
+    public class Person
     {
-        counter++;
-        txt = "Hello Dear!";
-    }
-    private void ChangeName(ChangeEventArgs e)
-    {
-        myName = e.Value as string;
+        public string Name { get; set; }
+        public string City { get; set; }
+
+
     }
 
+    // component parameter recieved from the parent component
+    [Parameter]
+    public string Name { get; set; }
 
+    [Parameter]
+
+    public string Value { get; set; }
+
+    // person property of People class
+    public Person person { get; set; }
+
+    
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime jsRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

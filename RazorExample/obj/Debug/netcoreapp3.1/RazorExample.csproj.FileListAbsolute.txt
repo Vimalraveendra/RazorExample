@@ -48,3 +48,11 @@
 /Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/RazorExample.pdb
 /Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/RazorExample.genruntimeconfig.cache
 /Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/RazorExample.csproj.CopyComplete
+/Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ExampleRender.razor.g.cs
+/Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/JavasComponent.razor.g.cs
+/Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/People.razor.g.cs
+/Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/Razor/Pages/ExampleRender.razor.g.cs
+/Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/Razor/Pages/JavasComponent.razor.g.cs
+/Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/Razor/Pages/People.razor.g.cs
+/Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/Example.razor.g.cs
+/Users/vimalraveendran/Projects/RazorExample/RazorExample/obj/Debug/netcoreapp3.1/Razor/Pages/Example.razor.g.cs

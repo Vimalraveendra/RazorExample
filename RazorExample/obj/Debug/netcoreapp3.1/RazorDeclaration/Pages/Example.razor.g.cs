@@ -11,7 +11,6 @@ namespace RazorExample.Pages
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Components;
 #nullable restore
 #line 1 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/_Imports.razor"
 using System.Net.Http;
@@ -55,13 +54,6 @@ using Microsoft.AspNetCore.Components.Web;
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/_Imports.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 8 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/_Imports.razor"
 using RazorExample;
 
@@ -75,8 +67,21 @@ using RazorExample.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/Example.razor"
+using Microsoft.AspNetCore.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/Example.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class Example : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -84,28 +89,22 @@ using RazorExample.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/Index.razor"
+#line 17 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/Example.razor"
        
-    private int counter = 0;
-    private string txt = "Hello World!";
-    public string myName;
+    private string fromJs;
+    private ElementReference element;
 
-    private void incrementCounter()
+    public async void HandleClick()
     {
-        counter++;
-        txt = "Hello Dear!";
+        fromJs = await JSRuntime.InvokeAsync<string>("SetText", element, "Hello from Js");
+        StateHasChanged();
     }
-    private void ChangeName(ChangeEventArgs e)
-    {
-        myName = e.Value as string;
-    }
-
 
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime jsRuntime { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JSRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -75,8 +75,7 @@ using RazorExample.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class ExampleRender : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -84,28 +83,19 @@ using RazorExample.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/Index.razor"
-       
-    private int counter = 0;
-    private string txt = "Hello World!";
-    public string myName;
+#line 8 "/Users/vimalraveendran/Projects/RazorExample/RazorExample/Pages/ExampleRender.razor"
+           
 
-    private void incrementCounter()
+    public string Name;
+
+    public void HandleClick()
     {
-        counter++;
-        txt = "Hello Dear!";
+        Name = "Blazor";
     }
-    private void ChangeName(ChangeEventArgs e)
-    {
-        myName = e.Value as string;
-    }
-
-
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime jsRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

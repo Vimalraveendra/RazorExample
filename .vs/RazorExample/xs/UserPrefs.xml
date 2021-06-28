@@ -1,24 +1,26 @@
 ﻿<Properties StartupConfiguration="{7C00D691-14D4-4B42-91E1-724BA7F270A3}|Default">
   <MonoDevelop.Ide.ItemProperties.RazorExample PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RazorExample/Pages/Index.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RazorExample/Pages/Example.razor">
     <Files>
-      <File FileName="RazorExample/Pages/Index.razor" Line="29" Column="36" />
-      <File FileName="RazorExample/Pages/Counter.razor" />
-      <File FileName="RazorExample/Pages/Error.cshtml" />
-      <File FileName="RazorExample/Pages/FetchData.razor" />
-      <File FileName="RazorExample/Shared/MainLayout.razor" />
-      <File FileName="RazorExample/Shared/NavMenu.razor" />
+      <File FileName="RazorExample/Pages/ExampleRender.razor" Line="8" Column="12" />
+      <File FileName="RazorExample/Pages/Counter.razor" Line="1" Column="1" />
+      <File FileName="RazorExample/Pages/_Host.cshtml" Line="35" Column="24" />
+      <File FileName="RazorExample/Pages/JavasComponent.razor" Line="14" Column="47" />
+      <File FileName="RazorExample/Pages/People.razor" Line="1" Column="1" />
+      <File FileName="RazorExample/Pages/Index.razor" Line="1" Column="1" />
+      <File FileName="RazorExample/wwwroot/script.js" Line="1" Column="1" />
+      <File FileName="RazorExample/Pages/Example.razor" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RazorExample" expanded="True">
             <Node name="RazorExample" expanded="True">
+              <Node name="Data" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="Index.razor" selected="True" />
+                <Node name="Example.razor" selected="True" />
               </Node>
-              <Node name="Properties" expanded="True" />
-              <Node name="Shared" expanded="True" />
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
