@@ -1,0 +1,36 @@
+﻿@inject IJSRuntime jsRuntime
+
+
+@page "/"
+
+
+<h1>Hello, world!</h1>
+<p>The message is:@txt</p>
+<p>The counter is : @counter</p>
+<button class="btn btn-danger" @onclick="incrementCounter">Click me</button>
+<h3 class="bg-secondary text-white">@myName</h3>
+<div class="form-group">
+    <label>Name:</label>
+    <input type="text" class="form-control" @onchange="ChangeName"/>
+</div>
+
+@code {
+    private int counter = 0;
+    private string txt = "Hello World!";
+    public string myName;
+
+    private void incrementCounter()
+    {
+        counter++;
+        txt = "Hello Dear!";
+    }
+    private void ChangeName(ChangeEventArgs e)
+    {
+        myName = e.Value as string;
+    }
+
+
+}
+
+
+
